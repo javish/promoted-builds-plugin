@@ -52,6 +52,7 @@ public class ManualCondition extends PromotionCondition {
      * 
      */
     public final static String MISSING_USER_ID_DISPLAY_STRING = "N/A";
+    public final static String ANONYMOUS_USER = "anonymous";//Changed by Javish for anonymous approval
 
     public ManualCondition() {
     }
@@ -145,7 +146,7 @@ public class ManualCondition extends PromotionCondition {
     public boolean isInUsersList() {
         // Current user must be in users list or users list is empty
         Set<String> usersSet = getUsersAsSet();
-        return usersSet.contains(Hudson.getAuthentication().getName());
+        return usersSet.contains(Hudson.getAuthentication().getName()) || usersSet.contains(ANONYMOUS_USER);//Changed by Javish for anonymous approval
     }
 
     /*

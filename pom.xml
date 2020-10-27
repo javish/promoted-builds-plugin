@@ -9,7 +9,7 @@
   </parent>
 
   <artifactId>promoted-builds</artifactId>
-  <version>3.7</version>
+  <version>3.7-Custom</version>
   <packaging>hpi</packaging>
 
   <name>Jenkins promoted builds plugin</name>
